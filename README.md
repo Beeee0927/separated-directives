@@ -9,7 +9,7 @@ It mainly solved 2 probloms:
 
 The corresponding solutions are:
 
-- According to different argument 'el', we could distinguish then application at different places, and then trigger the function which depends on the context correspond to this 'el'.
+- According to different argument 'el', we could distinguish the applications at different places, and then trigger the function which depends on the context correspond to this 'el'.
 - A new hook 'bindingMounted' is added. It means when all of the values(components and doms) has been not undefined/null, and only be triggered once.
 
 ## Setup
