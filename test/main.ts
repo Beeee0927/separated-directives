@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import { x } from './directives'
+import { enterButton } from './directives'
 
 const app = createApp(App)
-app.directive('x', x)
+app.directive('enterButton', enterButton)
 app.mount('#app')

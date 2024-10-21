@@ -7,11 +7,8 @@ const buttonRef2 = useTemplateRef('buttonRef2')
 
 <template>
   App
-  <input type="text" v-x="buttonRef1" />
-  <button @click="console.log(111)" ref="buttonRef1"></button>
-  <input type="text" v-x="buttonRef2" />
-  <button @click="console.log(222)" ref="buttonRef2"></button>
-  <button></button>
+  <input type="text" v-enterButton="buttonRef1" />
+  <button @click="console.log('button1')" ref="buttonRef1"></button>
+  <input type="text" v-enterButton="buttonRef2" />
+  <button @click="console.log('button2')" ref="buttonRef2"></button>
 </template>
-
-<style scoped></style>

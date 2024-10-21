@@ -1,16 +1,13 @@
 import { useSeparatedDirectives } from 'separated-directives'
 
-export const x = useSeparatedDirectives(
+export const enterButton = useSeparatedDirectives(
   () => ({
     cnt: 0
   }),
   (ctx) => ({
-    mounted(el) {
-      console.log(el)
-      console.log(1)
-    },
     bindingMounted(el, binding) {
-      el.addEventListener('input', () => {
+      el.addEventListener('keydown', (e: any) => {
+        if (e.key !== 'Enter') return
         binding.value.click()
         console.log(ctx.cnt++)
       })
