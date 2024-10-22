@@ -1,11 +1,24 @@
 {
   "name": "separated-directives",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A plugin includes a hook which could help to simulate a closure for Vue3 directive objects",
   "main": "lib/main.ts",
   "files": [
     "lib"
   ],
+  "keywords": [
+    "Vue3",
+    "directive"
+  ],
+  "author": {
+    "email": "1572255051@qq.com",
+    "name": "Beeee0927",
+    "url": "https://github.com/Beeee0927"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Beeee0927/separated-directives"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -18,7 +31,7 @@
   },
   "dependencies": {
     "separated-directives": "^1.0.3",
-    "vue": "^3.5.12"
+    "vue": "^3.0.0"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
