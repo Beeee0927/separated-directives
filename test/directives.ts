@@ -1,5 +1,5 @@
 // import { createSeparatedDirectives } from "lib"
-import { createSeparatedDirectives } from 'separated-directives/lib'
+import { createSeparatedDirectives } from 'separated-directives'
 
 export const enterButton = createSeparatedDirectives(
   () => ({
