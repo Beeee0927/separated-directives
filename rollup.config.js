@@ -9,7 +9,7 @@ export default [
   {
     input: 'src/main.ts',
     output: {
-      file: 'lib/index.js',
+      file: 'dist/index.js',
       format: 'esm',
       plugins: [terser()]
     },
@@ -18,7 +18,7 @@ export default [
   {
     input: 'src/main.ts',
     output: {
-      file: 'lib/index.d.ts',
+      file: 'dist/index.d.ts',
       format: 'esm'
     },
     plugins: [typescript(tsconfig), dts(tsconfig)]
