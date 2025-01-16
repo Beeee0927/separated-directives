@@ -1,6 +1,6 @@
 {
   "name": "separated-directives",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A plugin includes a hook which could help to simulate a closure for Vue3 directive objects",
   "main": "dist/main.ts",
   "files": [
