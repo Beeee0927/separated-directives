@@ -1,4 +1,4 @@
-import type { ObjectDirective, Plugin } from 'vue'
+import { type ObjectDirective } from 'vue'
 
 class AutoInitMap<K extends WeakKey, V> extends WeakMap {
   createDefaultValue: () => V
@@ -13,7 +13,7 @@ class AutoInitMap<K extends WeakKey, V> extends WeakMap {
   }
 }
 
-export const useSeparatedDirectives = <T>(
+export const createSeparatedDirectives = <T>(
   ctxSetup: () => T,
   callback: (
     ctx: T
@@ -83,11 +83,3 @@ export const useSeparatedDirectives = <T>(
   }
   return middleObj
 }
-
-// const plugin: Plugin = {
-//   install(app, options) {
-//     app.config.globalProperties.useSeparatedDirectives = useSeparatedDirectives
-//   }
-// }
-
-// export default plugin

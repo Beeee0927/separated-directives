@@ -11,12 +11,5 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./test', import.meta.url))
     }
-  },
-  build: {
-    lib: {
-      entry: resolve(__dirname, 'lib/main.ts'),
-      name: 'separatedDirectives',
-      fileName: 'index'
-    }
   }
 })

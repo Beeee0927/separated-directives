@@ -1,6 +1,6 @@
-import { useSeparatedDirectives } from 'separated-directives'
+import { createSeparatedDirectives } from '../lib/index'
 
-export const enterButton = useSeparatedDirectives(
+export const enterButton = createSeparatedDirectives(
   () => ({
     cnt: 0
   }),
