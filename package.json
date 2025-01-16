@@ -19,6 +19,9 @@
     "type": "git",
     "url": "https://github.com/Beeee0927/separated-directives"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "type": "module",
   "scripts": {
     "build": "pnpm rollup -c",
