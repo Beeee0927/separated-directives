@@ -1,13 +1,13 @@
 # separated-directives
 
-This is a plugin including a hook which could help to simulate a closure for Vue3 directive objects.
+**This is a plugin including a hook which could help to simulate a closure for Vue3 directive objects.**
 
-It mainly solved 2 probloms:
+**It mainly solved 2 probloms:**
 
 - One directive object always has only one context. When we use it at different places, all of them use the same context which is created along with the directive object.
-- The hook 'mounted' of directive object means the time when its father component and all of its children component mounted, instead of when all components mounted. So we can only put those code into hook 'updated', but it alse cause too problems.
+- The hook 'mounted' of directive object means the time when its parent component and all of its children component mounted, instead of when all components mounted. So sometimes when we need to wait some conponents to be mounted, we can only put those code into hook 'updated', but it alse cause too many problems.
 
-The corresponding solutions are:
+**The corresponding solutions are:**
 
 - According to different argument 'el', we could distinguish the applications at different places, and then trigger the function which depends on the context correspond to this 'el'.
 - A new hook 'bindingMounted' is added. It means when all of the values(components and doms) has been not undefined/null, and only be triggered once.
@@ -22,15 +22,15 @@ npm install separated-directives
 
 ###### Juejin link: https://juejin.cn/post/7420597224516157477.
 
-Package separated-directives exports a function "useSeparatedDirectives" to create a Vue3 directive object.
+Package separated-directives exports a function "createSeparatedDirectives" to create a Vue3 directive object.
 
 ###### There is a demo below.
 
 ```ts
 // directives.ts
-import { useSeparatedDirectives } from 'separated-directives'
+import { createSeparatedDirectives } from 'separated-directives'
 
-export const enterButton = useSeparatedDirectives(
+export const enterButton = createSeparatedDirectives(
   () => ({
     cnt: 0
   }),
@@ -75,8 +75,9 @@ const buttonRef2 = useTemplateRef('buttonRef2')
 </template>
 ```
 
-In this demo, if we press 'Enter' in the first input dom, and then the second, we would see the console log:
+In this demo, if we press 'Enter' in the first input dom twice, and then the second, we would see the console log:
 
+```js
 button1
 0
 button1
@@ -85,13 +86,14 @@ button2
 0
 button2
 1
+```
 
 It shows that the context has been separated, and hook 'bindingMounted' only been triggered once.
 
-## Others
+## Other Notes
 
 ###### All element binding ways supported by 'bindingMounted':
 
-- single: v-enterButton="buttonRef1"
-- array: v-enterButton="[buttonRef1, buttonRef2]"
-- object: v-enterButton = { nodes: buttonRef1, ... } or { nodes: [buttonRef1, buttonRef2], ... }
+- **single:** v-enterButton="buttonRef1"
+- **array:** v-enterButton="[buttonRef1, buttonRef2]"
+- **object:** v-enterButton = { nodes: buttonRef1, ... } or { nodes: [buttonRef1, buttonRef2], ... }
