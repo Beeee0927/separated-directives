@@ -1,6 +1,6 @@
 # separated-directives
 
-**This is a plugin including a hook which could help to simulate a closure for Vue3 directive objects.**
+**This package includes a function which can help to create Vue3 directive objects.**
 
 **It mainly solved 2 probloms:**
 
