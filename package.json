@@ -31,8 +31,9 @@
     "watch": "pnpm rollup -c --watch",
     "dev": "vite"
   },
-  "dependencies": {
-    "vue": "^3.5.13"
+  "peerDependencies": {
+    "pinia": ">=2.0.0",
+    "vue": ">=3.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.1.2",
@@ -54,6 +55,7 @@
     "tslib": "^2.8.1",
     "typescript": "~5.5.4",
     "vite": "^5.4.11",
+    "vue": "^3.5.13",
     "vue-tsc": "^2.2.0"
   }
 }
